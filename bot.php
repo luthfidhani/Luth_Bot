@@ -1,16 +1,17 @@
 <?php
 /*
-copyright @ medantechno.com
-Modified @ Farzain - zFz
-2017
+copyright @ luthfi.congeducation.com
+Modified @ Captain Luth
+2018
 
 */
 
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'YOUR-CHANNEL-ACCESS-TOKEN'; //sesuaikan 
-$channelSecret = 'YOUR-CHANNEL-SECRET-CODE';//sesuaikan
+$channelAccessToken = 'DgxUzG19nZrDTqsyx+g5vY7raceJ8B4rtkwWkJwbqSOCRv0Ftbi6Q1XiRmKs2brrq72dV/GbhbR/RmBSeWBHnMGl6rNe2s09Rrs/ZoQsSCx8kvf1u3QpY0i/iSvFyokV8GFtYiq/15FO1FfTfKkNjwdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = '994e7c1ebafaa0863499a7ae7acf75bb
+';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -57,6 +58,7 @@ function shalat($keyword) {
 	$result .= $json['data']['Maghrib'];
 	$result .= "\nIsya : ";
 	$result .= $json['data']['Isha'];
+	$result .= "\n\nBy: Captain Luth ^-^
     return $result;
 }
 #-------------------------[Function]-------------------------#
@@ -69,7 +71,7 @@ function shalat($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Assalamualaikum Kakak, aku adalah bot jadwal shalat, silahkan ketik\n\n/shalat <nama tempat>\n\nnanti aku bakalan kasih tahu jam berapa waktunya shalat ^_^";
+    $text = "Assalamualaikum Broo.wkwkwkw, ingin tau jadwal sholat daerah kalian, silahkan ketik\n\n/shalat <nama tempat>\n\nnanti akan muncul jadwal sholat dengan ajaib ^_^";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -104,7 +106,7 @@ if($message['type']=='text') {
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'Makasih Kak Stikernya ^_^'										
+										'text' => 'Makasih broo Stikernya ^_^\nsemoga ketemu di jannah yaa...'										
 									
 									)
 							)
